@@ -26,12 +26,22 @@ a, .classic {
 	display: inline-flex;
 	text-align: center;
 	vertical-align: center;
+	z-index: 100;
+	position: relative;
+	cursor: default;
 }
 
 a:hover, .classic:hover {
 	background-color: hsl(206, 18%, 50%);
 	color: #fff;
 }
+
+a:focus {
+	box-shadow: 0 0 0 max(100vw, 100vh) #000a;
+	transition: 300ms;
+	z-index: 300;
+}
+
 
 #newPanel {
 	display: none;
@@ -69,6 +79,7 @@ a:hover, .classic:hover {
 	background-color: #dededede;
 }
 
+
 #newAddOk {
 	/*background-color: hsl(206, 100%, 80%);*/
 	background-color: #d64242;
@@ -95,4 +106,8 @@ a:hover, .classic:hover {
 
 #newColor {
 	border-radius: 0;
+}
+
+#tools{
+	z-index: 99;	
 }
