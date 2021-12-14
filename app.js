@@ -19,12 +19,11 @@ var links = []
 
 function init() {
 	if (!d.ready) {
+		d.links = ''
+		// save()
 		d.ready = true
-		// loadTile()
-		// load()
 	} else {
 		d.ready = true
-		// links = JSON.parse(d.links)
 	}
 }
 
@@ -72,7 +71,7 @@ function addNewLink() {
 
 newAddOk.onclick = addNewLink
 
-// init()
+init()
 
 loadTile()
 
@@ -98,7 +97,6 @@ newTitle.addEventListener("keyup", function(event) {
     newAddOk.click();
   }
 });
-
 
 
 add.onclick = e => {
